@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    line-height: 1;
+}
+
+@font-face {
+    font-family: 'Iransans';
+    src: url(./fonts/IRANSansWeb.woff);
+}
+
+body {
+    height: 100vh;
+    font-family: 'Iransans';
+}
+
+.main {
+    background: gray;
+    width: 30rem;
+    height: 40rem;
+    border-radius: 20px;
+}
+
+.input {
+    height: 30vh;
+    border-bottom: 1px solid black;
+}
+
+.search:hover {
+    background-color: rgb(91, 151, 0) !important;
+}
+
+.translate {
+    height: 40vh;
+}
+
+.searchInput,.answer ,.sample{
+    height: 2.5rem;
+    font-size: 1.5rem;
+}
+
+.labels>label {
+    height: 3rem;
+    font-size: 1rem;
+    margin-left: 1rem;
+}
