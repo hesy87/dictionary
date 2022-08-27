@@ -21,12 +21,16 @@
 //   },
 // ];
 
-
 import words from "./words.json" ;
+
+window.onload() {
+  console.log(words.words);
+}
+
+
 function search() {
   let word = document.querySelector("#inputWord").value;
   document.querySelector(".searchInput").innerText = word;
-  console.log(words.words.en)
   // for (let i = 0; i < words.words.length; i++)
   //   if (word == words.words[0].en) {
   //     document.querySelector(".answer").innerText = words.words[1].per;
