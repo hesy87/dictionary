@@ -21,19 +21,21 @@
 //   },
 // ];
 
-import words from "./words.json" ;
+fetch('./words.json')
+.then(response => {
+   return response.json();
+})
+.then((jsondata => console.log(jsondata.words[0].en)));
 
-window.onload() {
-  console.log(words.words);
-}
+let words = require('./words.json');
+console.log(words)
 
-
-function search() {
+function search(words) {
   let word = document.querySelector("#inputWord").value;
   document.querySelector(".searchInput").innerText = word;
-  // for (let i = 0; i < words.words.length; i++)
-  //   if (word == words.words[0].en) {
-  //     document.querySelector(".answer").innerText = words.words[1].per;
-  //     document.querySelector(".sample").innerText = words.words[2].sample;
-  //   }
+  for (let i = 0; i < words.words.length; i++)
+    if (word == words.words[i].en) {
+      document.querySelector(".answer").innerText = words.words[i].per;
+      document.querySelector(".sample").innerText = words.words[i].sample;
+    }
 }
