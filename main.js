@@ -5,10 +5,14 @@ fetch('./words.json')
     return response.json();
   })
   .then(jsondata => {
-    let words = jsondata.words
     this.thisWordIsCorrect = jsondata.words
-    console.log(words)
   });
 function search() {
-  console.log(this.thisWordIsCorrect)
+  let word = document.querySelector("#inputWord").value;
+  document.querySelector(".searchInput").innerText = word;
+  let answer = this.thisWordIsCorrect.filter(function (e) {
+    return e.en == word;
+  });
+  document.querySelector(".answer").innerText = answer[0].per;
+  document.querySelector(".sample").innerText = answer[0].sample;
 }
