@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -14,22 +14,31 @@
 
 <body class="d-flex justify-content-center align-content-center">
     <div class="main mt-4">
-        <div class="input d-flex flex-row justify-content-center align-items-center">
-            <label class="ms-2">جستجوی لغت</label>
-            <input class="pe-2" type="text" id="inputWord" placeholder="جستجو">
-            <button class="search me-2 p-2 rounded-3 bg-success border-0" onclick="search()">Search</button>
+        <div class="input">
+            <label class="ms-2 mt-5">Persian Dictionary</label>
+            <div class="inputBox position-relative">
+                <input class="ps-5" type="text" id="inputWord" placeholder="Find">
+                <img class="find position-absolute" src="./search.svg" onclick="search()">
+                <img class="close position-absolute" src="./x.svg">
+            </div>
+            <button class="search ms-2 p-2 rounded-3 border-0" onclick="search()">Search</button>
         </div>
-        <div class="row translate d-flex flex-row justify-content-center align-items-center">
-            <div class="col-4 d-flex flex-column labels justify-content-center align-items-center">
-                <label >لغت جستجو شده</label>
+        <div class="translate">
+            <div class="firstAcc" onclick="openAcc()">
+                <label>لغت جستجو شده</label>
+                <img class="caret" src="./caret-down.svg">
+            </div>
+            <h3 class="searchInput">rrr</h3>
+            <div class="firstAcc"  onclick="openAcc2()">
                 <label>ترجمه به فارسی</label>
-                <label >نمونه جمله</label>
+                <img class="caret2" src="./caret-down.svg">
             </div>
-            <div class="col-6 d-flex flex-column justify-content-center align-items-center">
-                <h3 class="searchInput"></h3>
-                <h3 class="answer"></h3>
-                <h3 class="sample"></h3>
+            <h3 class="answer">rrrr</h3>
+            <div class="firstAcc" onclick="openAcc3()">
+                <label>نمونه جمله</label>
+                <img class="caret3" src="./caret-down.svg" >
             </div>
+            <h3 class="sample">rrrr</h3>
         </div>
     </div>
     <script src="./main.js"></script>

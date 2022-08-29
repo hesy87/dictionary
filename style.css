@@ -17,35 +17,110 @@
 body {
     height: 100vh;
     font-family: 'Iransans';
+    background: #4f4feb;
 }
 
 .main {
-    background: gray;
-    width: 30rem;
-    height: 40rem;
+    background: #fff;
+    width: 20rem;
+    height: 30rem;
     border-radius: 20px;
+    margin-top: 5rem !important;
 }
 
 .input {
-    height: 30vh;
-    border-bottom: 1px solid black;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 20rem;
+}
+
+
+#inputWord {
+    padding: .5rem;
+    border-radius: 5px;
+}
+
+.search {
+    background: linear-gradient(90deg, rgba(235, 79, 182, 1) 0%, rgba(82, 175, 86, 1) 35%, rgba(0, 215, 255, 1) 100%);
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 0.5s ease-out;
+    width: 7rem;
 }
 
 .search:hover {
-    background-color: rgb(91, 151, 0) !important;
+    background : linear-gradient(90deg, rgba(235, 142, 79, 1) 0%, rgba(82, 84, 175, 1) 35%, rgba(0, 215, 255, 1) 100%);
 }
+
+
+.inputBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.find {
+    position: absolute;
+    top: 30%;
+    margin-left: 5px;
+}
+
+.close {
+    position: absolute;
+    left: 90%;
+    top: 30%;
+}
+
+/* *******************translate ****************** */
 
 .translate {
-    height: 40vh;
+    height: 30vh;
+    margin-top: 1.5rem;
+    margin-left: 2.5rem;
 }
 
-.searchInput,.answer ,.sample{
-    height: 2.5rem;
-    font-size: 1.5rem;
-}
-
-.labels>label {
-    height: 3rem;
+.translate>label,
+.translate>h3 {
+    height: 2rem;
     font-size: 1rem;
-    margin-left: 1rem;
+    text-align: left;
+}
+
+.firstAcc {
+    border: 1px solid black;
+    width: 15rem;
+    height: 3rem;
+    padding-left: 1rem;
+    text-align: start;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+}
+
+.firstAcc:hover {
+    background: gray;
+    transition: all 0.4s ease-in-out;
+    color: white;
+}
+.caret,
+.caret2,
+.caret3 {
+    width: 1.5rem;
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.searchInput,
+.answer,
+.sample {
+    display: none;
+    width: 12rem;
+    padding-left: 1rem;
 }
