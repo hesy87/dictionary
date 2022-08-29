@@ -1,20 +1,25 @@
 let thisWordIsCorrect = null;
-fetch("./words.json")
+fetch("./index.json")
   .then((response) => {
     return response.json();
   })
   .then((jsondata) => {
-    this.thisWordIsCorrect = jsondata.words;
+    console.log(jsondata);
+    this.thisWordIsCorrect = jsondata;
   });
+
 function search() {
   let word = document.querySelector("#inputWord").value;
   document.querySelector(".searchInput").innerText = word;
   let answer = this.thisWordIsCorrect.filter(function (e) {
-    return e.en == word;
+    return e == word;
   });
+  console.log(answer);
   document.querySelector(".answer").innerText = answer[0].per;
   document.querySelector(".sample").innerText = answer[0].sample;
 }
+
+// ---------------------------------------------------------------
 
 
 let acc = true
