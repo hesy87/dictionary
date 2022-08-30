@@ -4,19 +4,21 @@ fetch("./index.json")
     return response.json();
   })
   .then((jsondata) => {
-    console.log(jsondata);
-    this.thisWordIsCorrect = jsondata;
+    this.thisWordIsCorrect = jsondata.words;
   });
 
 function search() {
   let word = document.querySelector("#inputWord").value;
   document.querySelector(".searchInput").innerText = word;
+
+  console.log(this.thisWordIsCorrect);
+
   let answer = this.thisWordIsCorrect.filter(function (e) {
     return e == word;
   });
   console.log(answer);
-  document.querySelector(".answer").innerText = answer[0].per;
-  document.querySelector(".sample").innerText = answer[0].sample;
+  // document.querySelector(".answer").innerText = answer[0].per;
+  // document.querySelector(".sample").innerText = answer[0].sample;
 }
 
 // ---------------------------------------------------------------
