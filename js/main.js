@@ -10,15 +10,11 @@ fetch("./index.json")
 function search() {
   let word = document.querySelector("#inputWord").value;
   document.querySelector(".searchInput").innerText = word;
-
-  console.log(this.thisWordIsCorrect);
-
   let answer = this.thisWordIsCorrect.filter(function (e) {
-    return e == word;
+    return e.en == word;
   });
-  console.log(answer);
-  // document.querySelector(".answer").innerText = answer[0].per;
-  // document.querySelector(".sample").innerText = answer[0].sample;
+
+  document.querySelector(".answer").innerText = answer[0].fa[0];
 }
 
 // ---------------------------------------------------------------
@@ -47,19 +43,6 @@ function openAcc2() {
   else {
     document.querySelector(".answer").style.display = "none";
     document.querySelector(".caret2").style.transform = "rotate(0)";
-    acc = true
-  }
-}
-
-function openAcc3() {
-  if (acc) {
-    document.querySelector(".sample").style.display = "block";
-    document.querySelector(".caret3").style.transform = "rotate(180deg)";
-    acc = false
-  }
-  else {
-    document.querySelector(".sample").style.display = "none";
-    document.querySelector(".caret3").style.transform = "rotate(0)";
     acc = true
   }
 }
