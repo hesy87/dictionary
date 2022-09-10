@@ -17,10 +17,9 @@
 body {
     height: 100vh;
     font-family: 'Iransans';
-    background: #4f4feb;
 }
 
-.main {
+/* .main {
     background: #fff;
     width: 20rem;
     height: 30rem;
@@ -29,7 +28,7 @@ body {
 }
 
 .input {
-    height: 20vh;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -44,15 +43,11 @@ body {
 }
 
 .search {
-    background-image: linear-gradient(90deg, rgba(235, 79, 182, 1) 0%, rgba(82, 175, 86, 1) 35%, rgba(0, 215, 255, 1) 100%);
-    background-position: 300;
-    transition: background-color 0.5s ease-out;
-    width: 7rem;
+    background-image: linear-gradient(90deg, rgba(198,137,198,1) 0%, rgba(198,137,198,1) 50%, rgba(232,160,191,1) 100%);;
+    width: 8rem;
 }
 
 .search:hover {
-    background-image : linear-gradient(90deg, rgba(235, 142, 79, 1) 0%, rgba(82, 84, 175, 1) 35%, rgba(0, 215, 255, 1) 100%);
-    background-position: 100%;
 }
 
 
@@ -65,15 +60,16 @@ body {
     position: absolute;
     top: 30%;
     margin-left: 5px;
+    cursor: pointer;
 }
 
 .close {
     position: absolute;
     left: 90%;
     top: 30%;
+    cursor: pointer;
 }
 
-/* *******************translate ****************** */
 
 .translate {
     height: 30vh;
@@ -122,4 +118,7 @@ body {
     display: none;
     width: 12rem;
     padding-left: 1rem;
-}
+} */
+
+
+

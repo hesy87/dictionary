@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  line-height: 1;
+}
+
+@font-face {
+  font-family: "Iransans";
+  src: url(../fonts/IRANSansWeb.woff);
+}
+
+body {
+  height: 100vh;
+  font-family: "Iransans";
+  background-image: url("../img/my-back.jpg");
+}
+
+#Search {
+  padding: 1.5rem 5rem 1.5rem 5rem;
+  border-radius: 10px;
+  border: 1px solid blue;
+  color: blue;
+  font-size: 22px;
+  transition: all 0.2s ease-in-out;
+  cursor: url(../img/logo-removebg-preview.png),pointer;
+}
+
+#Search:hover {
+  color: white;
+  background: rgba(0, 0, 255, 0.5) !important;
+}
+
+.input {
+  padding: 1.39rem;
+  border: 1px solid gray;
+  border-radius: 10px;
+  font-size: 22px;
+  color: blue;
+}
+
+.input::placeholder {
+  font-size: 22px;
+  text-align: right;
+}
+
+.input:focus {
+    border: 1px solid rgb(2, 153, 2);
+}
+
+.remove {
+    position: absolute;
+    width: 2rem;
+    right: 2%;
+    display: none;
+    cursor: pointer;
+}
+
+.zarebin {
+    width: 7rem;
+}
+
+.text {
+    color: blue;
+}
+
+.clear {
+    border: 1px solid rgba(128, 128, 128, 0.219);
+    width: 100vw;
+}
+
+
+.tarjome>div>div>p {
+    color: blue;
+    padding-top: 2rem;
+    font-size: 22px;
+}
+
+.tarjome {
+    background: white;
+    width: 70%;
+    border: 1px solid rgba(0, 0, 0, 0.2);;
+    margin-top: 6rem;
+    display: none;
+}
+
+.tarjome>div>div:nth-child(1) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}

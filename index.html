@@ -1,47 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Dictionary</title>
-</head>
-
-<!-- <body class="d-flex justify-content-center align-content-center">
-    <div class="main mt-4">
-        <div class="input">
-            <label class="ms-2 mt-5">Persian Dictionary</label>
-            <div class="inputBox position-relative">
-                <input class="ps-5" type="text" id="inputWord" placeholder="Find">
-                <img class="find position-absolute" src="./img/search.svg" onclick="search()">
-                <img class="close position-absolute" src="./img/x.svg">
-            </div>
-            <button class="search ms-2 p-2 rounded-3 border-0" onclick="search()">Search</button>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style2.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <div
+            class="position-relative col-6 justify-content-center align-items-center d-flex mt-4"
+          >
+            <input
+              dir="ltr"
+              id="input"
+              type="text"
+              class="w-100 input"
+              placeholder="دنبال کلمه ای میگردی؟ اینجا سرچ کن"
+              onkeypress="showRemove()"
+            />
+            <img
+              src="./img/57781-200-removebg-preview.png"
+              onclick="remove()"
+              class="remove"
+            />
+          </div>
+          <div class="col-3 justify-content-center d-flex p-5 mt-4">
+            <button
+              type="submit"
+              id="Search"
+              class="bg-white"
+              onclick="search();show()"
+            >
+              ارسال
+            </button>
+          </div>
         </div>
-        <div class="translate">
-            <div class="firstAcc" onclick="openAcc()">
-                <label>لغت جستجو شده</label>
-                <img class="caret" src="./img/caret-down.svg">
-            </div>
-            <h3 class="searchInput">rrr</h3>
-            <div class="firstAcc"  onclick="openAcc2()">
-                <label>ترجمه به فارسی</label>
-                <img class="caret2" src="./img/caret-down.svg">
-            </div>
-            <h3 class="answer"></h3>
-            <h3 class="sample"></h3>
-        </div>
+      </div>
     </div>
-    <script src="./js/main.js"></script>
-</body> -->
-
-<body>
-    
-</body>
-
+    <div class="clear"></div>
+    <div class="container translate">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <img
+            class="zarebin pt-5"
+            src="./img/1024px-Search_Icon.svg__1_-removebg-preview.png"
+            alt=""
+          />
+        </div>
+        <div
+          class="fs-3 text pt-5 col-12 d-flex justify-content-center align-items-center"
+        >
+          برای مشاهده نتیجه، اطلاعات خواسته شده را وارد کنید سپس بر روی دکمه
+          استعلام کلیک کنید
+        </div>
+      </div>
+    </div>
+    <div class="container tarjome">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 d-flex justify-content-center align-items-center">
+          <p id="answer">صرف نظر کردن</p>
+        </div>
+        <div
+          class="col-12 d-flex justify-content-center align-items-center flex-column"
+        >
+          <p>He kept the company</p>
+          <p>او شرکت را ادامه داد</p>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main2.js"></script>
+  </body>
 </html>

@@ -46,3 +46,17 @@ function openAcc2() {
     acc = true
   }
 }
+
+
+function remove() {
+  document.querySelector("#inputWord").value = "";
+}
+
+
+window.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    search();
+    openAcc();
+    openAcc2();
+  }
+});
