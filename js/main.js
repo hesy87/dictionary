@@ -1,3 +1,12 @@
+function showRemove () {
+    document.querySelector('.remove').style.display = 'block';
+}
+
+function remove() {
+    document.querySelector('.input').value = '';
+    document.querySelector('.remove').style.display = 'none';
+}
+
 let thisWordIsCorrect = null;
 fetch("./index.json")
   .then((response) => {
@@ -8,55 +17,21 @@ fetch("./index.json")
   });
 
 function search() {
-  let word = document.querySelector("#inputWord").value;
-  document.querySelector(".searchInput").innerText = word;
   let answer = this.thisWordIsCorrect.filter(function (e) {
-    return e.en == word;
+    return e.en == document.querySelector("#input").value;
   });
+    document.querySelector("#answer").innerText = answer[0].fa.join(' / ');
+  }
 
-  document.querySelector(".answer").innerText = answer[0].fa[0];
+
+function show() {
+    document.querySelector('.translate').style.display = 'none';
+    document.querySelector('.tarjome').style.display = 'block';
 }
 
-// ---------------------------------------------------------------
-
-
-let acc = true
-function openAcc() {
-  if (acc) {
-    document.querySelector(".searchInput").style.display = "block";
-    document.querySelector(".caret").style.transform = "rotate(180deg)";
-    acc = false
-  }
-  else {
-    document.querySelector(".searchInput").style.display = "none";
-    document.querySelector(".caret").style.transform = "rotate(0)";
-    acc = true
-  }
-}
-
-function openAcc2() {
-  if (acc) {
-    document.querySelector(".answer").style.display = "block";
-    document.querySelector(".caret2").style.transform = "rotate(180deg)";
-    acc = false
-  }
-  else {
-    document.querySelector(".answer").style.display = "none";
-    document.querySelector(".caret2").style.transform = "rotate(0)";
-    acc = true
-  }
-}
-
-
-function remove() {
-  document.querySelector("#inputWord").value = "";
-}
-
-
-window.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    search();
-    openAcc();
-    openAcc2();
-  }
-});
+// window.addEventListener("keypress", function(event) {
+//   let word = document.querySelector("#input").value;
+//   if (event.key === "Enter" && word != null) {
+//     search();
+//   }
+// });
